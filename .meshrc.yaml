@@ -1,0 +1,34 @@
+sources:
+  - name: pokemon-rest
+    handler:
+      jsonSchema:
+        baseUrl: https://pokeapi.co/api/v2/pokemon/
+        operations:
+          - type: Query
+            field: pokemon
+            path: /?limit={args.limit}&offset={args.offset}
+            method: GET
+            responseSchema: ./pokemon/schemas/get-all-pokemon.json
+  - name: posts-service
+    handler:
+      jsonSchema:
+        baseUrl: https://jsonplaceholder.typicode.com
+        operations:
+          - type: Query
+            field: posts
+            method: GET
+            responseSchema: ./posts/schemas/all-posts.json
+  - name: spacex-gql
+    handler:
+      graphql:
+        endpoint: https://api.spacex.land/graphql/
+additionalTypeDefs:
+  - ./spacex/typeDefs/missions-s90.graphql
+additionalResolvers:
+  - ./spacex/resolvers/missions-s90.js
+serve:
+  hostname: 0.0.0.0
+  port: 4000
+  browser: true
+  playground: true
+  cors: { origins: "*" }

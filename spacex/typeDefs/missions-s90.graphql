@@ -1,0 +1,4 @@
+extend type Mission {
+  owner: String
+  email: String
+}

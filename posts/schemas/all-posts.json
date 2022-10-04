@@ -1,0 +1,22 @@
+{
+  "title": "Posts",
+  "type": "array",
+  "description": "list of random posts",
+  "items": {
+    "type": "object",
+    "properties": {
+      "userId": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "string"
+      },
+      "body": {
+        "type": "string"
+      }
+    }
+  }
+}

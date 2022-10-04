@@ -1,0 +1,24 @@
+{
+  "name": "mesh-experiment",
+  "version": "1.0.0",
+  "description": "experiment with gql mesh",
+  "main": "index.js",
+  "scripts": {
+    "start": "mesh start",
+    "dev": "mesh dev",
+    "build": "mesh build"
+  },
+  "keywords": [
+    "graphql",
+    "mesh"
+  ],
+  "author": "nicky",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.78.24",
+    "@graphql-mesh/graphql": "^0.31.19",
+    "@graphql-mesh/json-schema": "^0.35.18",
+    "@graphql-mesh/plugin-mock": "^0.0.25",
+    "graphql": "^16.6.0"
+  }
+}

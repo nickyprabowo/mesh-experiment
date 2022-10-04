@@ -1,0 +1,30 @@
+{
+  "title": "Pokemon",
+  "type": "object",
+  "description": "list of pokemon",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "count": {
+      "type": "string"
+    },
+    "next": {
+      "type": "string"
+    },
+    "previous": {
+      "type": "string"
+    }
+  }
+}
